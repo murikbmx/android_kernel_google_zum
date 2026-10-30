@@ -15,3 +15,10 @@ IN_KERNEL_MODULES=1
 DO_NOT_STRIP_MODULES=1
 
 HERMETIC_TOOLCHAIN=${HERMETIC_TOOLCHAIN:-1}
+
+# Report the stock LineageOS 24.0 shusky kernel identity:
+#   Linux version 6.1.162-android14-11-g33365f631c28-ab16466998
+#   (build-user@build-host) (... clang version 17.0.2 ..., LLD 17.0.2)
+#   #1 SMP PREEMPT Tue Sep 29 05:28:16 UTC 2026
+export LOCALVERSION_OVERRIDE=-android14-11-g33365f631c28-ab16466998
+export SOURCE_DATE_EPOCH=1790659696

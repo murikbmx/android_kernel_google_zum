@@ -170,4 +170,10 @@ if test -n "${BUILD_NUMBER}"; then
 	res="$res-ab${BUILD_NUMBER}"
 fi
 
+# LOCALVERSION_OVERRIDE replaces the whole local version, e.g. to report
+# the release of a stock kernel
+if test -n "${LOCALVERSION_OVERRIDE}"; then
+	res="${LOCALVERSION_OVERRIDE}"
+fi
+
 echo "$res"
